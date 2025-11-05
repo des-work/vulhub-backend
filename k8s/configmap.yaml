@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vulhub-config
+  labels:
+    app: vulhub-api
+data:
+  # Application Configuration
+  NODE_ENV: "production"
+  PORT: "4000"
+  LOG_LEVEL: "info"
+
+  # External Services
+  REDIS_HOST: "redis-service"
+  REDIS_PORT: "6379"
+  REDIS_DB: "0"
+
+  # CORS Configuration
+  CORS_ORIGIN: "https://vulhub.edu,https://app.vulhub.edu"
+
+  # Rate Limiting
+  RATE_LIMIT_TTL: "60000"
+  RATE_LIMIT_MAX: "100"
+
+  # Monitoring
+  MONITORING_ENABLED: "true"
+  OTEL_SERVICE_NAME: "vulhub-api"
+
+  # Email (if using external SMTP)
+  SMTP_HOST: "smtp.gmail.com"
+  SMTP_PORT: "587"
+  SMTP_SECURE: "false"
+
+  # File Upload
+  MAX_FILE_SIZE: "10485760"
+  SCAN_FOR_VIRUSES: "true"

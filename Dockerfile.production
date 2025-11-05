@@ -1,0 +1,95 @@
+# ===========================================
+# VulHub API Production Dockerfile
+# ===========================================
+# Multi-stage build optimized for production
+# Includes security hardening and performance optimizations
+
+# ===== Base Stage =====
+# Sets up Node.js with security hardening
+FROM node:18-alpine AS base
+
+# Install security updates and required packages
+RUN apk update && apk upgrade && \
+    apk add --no-cache \
+    dumb-init \
+    curl \
+    && rm -rf /var/cache/apk/*
+
+# Create non-root user for security
+RUN addgroup -S appgroup && \
+    adduser -S appuser -G appgroup -h /app -s /bin/sh
+
+# Set working directory
+WORKDIR /app
+
+# Set environment variables
+ENV NODE_ENV=production
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+
+# Switch to non-root user
+USER appuser
+
+# ===== Dependencies Stage =====
+# Installs only production dependencies
+FROM base AS deps
+
+# Copy package files
+COPY --chown=appuser:appgroup package.json pnpm-lock.yaml ./
+
+# Enable pnpm and install dependencies
+RUN corepack enable && \
+    pnpm install --frozen-lockfile --prod --ignore-scripts && \
+    pnpm store prune
+
+# ===== Builder Stage =====
+# Builds the TypeScript application
+FROM base AS builder
+
+# Copy dependencies from deps stage
+COPY --from=deps --chown=appuser:appgroup /app/node_modules ./node_modules
+
+# Copy source code
+COPY --chown=appuser:appgroup . .
+
+# Build the application
+RUN npm run build && \
+    npm prune --production
+
+# ===== Security Scanner Stage =====
+# Scans for vulnerabilities (optional but recommended)
+FROM base AS security-scan
+
+# Copy built application
+COPY --from=builder --chown=appuser:appgroup /app/dist ./dist
+COPY --from=builder --chown=appuser:appgroup /app/node_modules ./node_modules
+COPY --from=builder --chown=appuser:appgroup /app/package.json ./
+
+# Run security audit (if available)
+RUN npm audit --audit-level=moderate || true
+
+# ===== Production Stage =====
+# Final lightweight production image
+FROM base AS production
+
+# Copy built application from builder stage
+COPY --from=builder --chown=appuser:appgroup /app/dist ./dist
+COPY --from=builder --chown=appuser:appgroup /app/node_modules ./node_modules
+COPY --from=builder --chown=appuser:appgroup /app/package.json ./
+
+# Create necessary directories with correct permissions
+RUN mkdir -p /app/logs /app/uploads && \
+    chown -R appuser:appgroup /app/logs /app/uploads
+
+# Health check configuration
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+    CMD curl -f http://localhost:4000/api/v1/health/live || exit 1
+
+# Expose port
+EXPOSE 4000
+
+# Use dumb-init for proper signal handling
+ENTRYPOINT ["dumb-init", "--"]
+
+# Start the application
+CMD ["node", "dist/main.js"]

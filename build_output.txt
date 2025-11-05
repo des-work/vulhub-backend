@@ -1,0 +1,553 @@
+
+> @vulhub/api@1.0.0 build C:\Users\desmo\GA Projects\VulHub-LeaderBoard-Web\apps\api
+> nest build
+
+[1m[31mERROR[39m[22m in [1m./src/adapters/database/database.module.ts[39m[22m [1m[32m12:25-52[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './tenant.service' in 'C:\Users\desmo\GA Projects\VulHub-LeaderBoard-Web\apps\api\src\adapters\database'[39m[22m
+ @ ./src/app.module.ts 18:26-72
+ @ ./src/main.ts 12:21-44
+
+[1m[31mERROR[39m[22m in [1m./src/adapters/storage/storage.module.ts[39m[22m [1m[32m11:26-54[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './storage.service' in 'C:\Users\desmo\GA Projects\VulHub-LeaderBoard-Web\apps\api\src\adapters\storage'[39m[22m
+ @ ./src/app.module.ts 20:25-69
+ @ ./src/main.ts 12:21-44
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/auth.module.ts[39m[22m [1m[32m19:23-66[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '../../common/guards/tenant.guard' in 'C:\Users\desmo\GA Projects\VulHub-LeaderBoard-Web\apps\api\src\modules\auth'[39m[22m
+ @ ./src/app.module.ts 22:22-59
+ @ ./src/main.ts 12:21-44
+
+[1m[31mERROR[39m[22m in [1m./src/modules/submissions/application/submissions.service.ts[39m[22m [1m[32m16:26-78[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '../../../adapters/storage/storage.service' in 'C:\Users\desmo\GA Projects\VulHub-LeaderBoard-Web\apps\api\src\modules\submissions\application'[39m[22m
+ @ ./src/modules/submissions/submissions.module.ts 12:30-74
+ @ ./src/app.module.ts 25:29-80
+ @ ./src/main.ts 12:21-44
+
+[1m[31mERROR[39m[22m in [1m./src/adapters/database/database.module.ts:4:31[39m[22m
+TS2307: Cannot find module './tenant.service' or its corresponding type declarations.
+  [0m [90m 2 |[39m [36mimport[39m { [33mConfigService[39m } [36mfrom[39m [32m'@nestjs/config'[39m[33m;[39m
+   [90m 3 |[39m [36mimport[39m { [33mPrismaService[39m } [36mfrom[39m [32m'./prisma.service'[39m[33m;[39m
+  [31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { [33mTenantService[39m } [36mfrom[39m [32m'./tenant.service'[39m[33m;[39m
+   [90m   |[39m                               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 5 |[39m
+   [90m 6 |[39m [33m@[39m[33mGlobal[39m()
+   [90m 7 |[39m [33m@[39m[33mModule[39m({[0m
+
+[1m[31mERROR[39m[22m in [1m./src/adapters/storage/storage.module.ts:2:32[39m[22m
+TS2307: Cannot find module './storage.service' or its corresponding type declarations.
+  [0m [90m 1 |[39m [36mimport[39m { [33mGlobal[39m[33m,[39m [33mModule[39m } [36mfrom[39m [32m'@nestjs/common'[39m[33m;[39m
+  [31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m { [33mStorageService[39m } [36mfrom[39m [32m'./storage.service'[39m[33m;[39m
+   [90m   |[39m                                [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 3 |[39m
+   [90m 4 |[39m [33m@[39m[33mGlobal[39m()
+   [90m 5 |[39m [33m@[39m[33mModule[39m({[0m
+
+[1m[31mERROR[39m[22m in [1m./src/common/audit/audit.service.ts:32:11[39m[22m
+TS2353: Object literal may only specify known properties, and 'tenant' does not exist in type 'AuditLogInclude<DefaultArgs>'.
+  [0m [90m 30 |[39m         include[33m:[39m {
+   [90m 31 |[39m           user[33m:[39m [36mtrue[39m[33m,[39m
+  [31m[1m>[22m[39m[90m 32 |[39m           tenant[33m:[39m [36mtrue[39m[33m,[39m
+   [90m    |[39m           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 33 |[39m         }[33m,[39m
+   [90m 34 |[39m       })[33m,[39m
+   [90m 35 |[39m       [36mthis[39m[33m.[39mprisma[33m.[39mauditLog[33m.[39mcount({ where })[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/common/audit/audit.service.ts:56:9[39m[22m
+TS2353: Object literal may only specify known properties, and 'tenant' does not exist in type 'AuditLogInclude<DefaultArgs>'.
+  [0m [90m 54 |[39m       include[33m:[39m {
+   [90m 55 |[39m         user[33m:[39m [36mtrue[39m[33m,[39m
+  [31m[1m>[22m[39m[90m 56 |[39m         tenant[33m:[39m [36mtrue[39m[33m,[39m
+   [90m    |[39m         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 57 |[39m       }[33m,[39m
+   [90m 58 |[39m     })[33m;[39m
+   [90m 59 |[39m   }[0m
+
+[1m[31mERROR[39m[22m in [1m./src/common/audit/audit.service.ts:166:9[39m[22m
+TS2353: Object literal may only specify known properties, and 'tenant' does not exist in type 'AuditLogInclude<DefaultArgs>'.
+  [0m [90m 164 |[39m       include[33m:[39m {
+   [90m 165 |[39m         user[33m:[39m [36mtrue[39m[33m,[39m
+  [31m[1m>[22m[39m[90m 166 |[39m         tenant[33m:[39m [36mtrue[39m[33m,[39m
+   [90m     |[39m         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 167 |[39m       }[33m,[39m
+   [90m 168 |[39m     })[33m;[39m
+   [90m 169 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/common/security/audit-logger.service.ts:37:11[39m[22m
+TS2322: Type 'Record<string, any>' is not assignable to type 'string'.
+  [0m [90m 35 |[39m           resource[33m:[39m entry[33m.[39mresource[33m,[39m
+   [90m 36 |[39m           resourceId[33m:[39m entry[33m.[39mresourceId[33m,[39m
+  [31m[1m>[22m[39m[90m 37 |[39m           details[33m:[39m entry[33m.[39mdetails[33m,[39m
+   [90m    |[39m           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 38 |[39m           ipAddress[33m:[39m entry[33m.[39mipAddress[33m,[39m
+   [90m 39 |[39m           userAgent[33m:[39m entry[33m.[39muserAgent[33m,[39m
+   [90m 40 |[39m           timestamp[33m:[39m entry[33m.[39mtimestamp[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/common/security/audit-logger.service.ts:167:26[39m[22m
+TS2353: Object literal may only specify known properties, and 'tenantId' does not exist in type 'AuditLogWhereInput'.
+  [0m [90m 165 |[39m     [36mtry[39m {
+   [90m 166 |[39m       [36mreturn[39m [36mawait[39m [36mthis[39m[33m.[39mprisma[33m.[39mauditLog[33m.[39mfindMany({
+  [31m[1m>[22m[39m[90m 167 |[39m         where[33m:[39m { userId[33m,[39m tenantId }[33m,[39m
+   [90m     |[39m                          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 168 |[39m         orderBy[33m:[39m { timestamp[33m:[39m [32m'desc'[39m }[33m,[39m
+   [90m 169 |[39m         take[33m:[39m limit[33m,[39m
+   [90m 170 |[39m         skip[33m:[39m offset[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/common/security/audit-logger.service.ts:245:11[39m[22m
+TS2353: Object literal may only specify known properties, and 'tenantId' does not exist in type 'AuditLogWhereInput'.
+  [0m [90m 243 |[39m       [36mreturn[39m [36mawait[39m [36mthis[39m[33m.[39mprisma[33m.[39mauditLog[33m.[39mfindMany({
+   [90m 244 |[39m         where[33m:[39m {
+  [31m[1m>[22m[39m[90m 245 |[39m           tenantId[33m,[39m
+   [90m     |[39m           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 246 |[39m           resource[33m:[39m [32m'security'[39m[33m,[39m
+   [90m 247 |[39m         }[33m,[39m
+   [90m 248 |[39m         orderBy[33m:[39m { timestamp[33m:[39m [32m'desc'[39m }[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/application/auth.service.ts:149:20[39m[22m
+TS2353: Object literal may only specify known properties, and 'tenant' does not exist in type 'UserInclude<DefaultArgs>'.
+  [0m [90m 147 |[39m       [36mconst[39m user [33m=[39m [36mawait[39m [36mthis[39m[33m.[39mprisma[33m.[39muser[33m.[39mfindUnique({
+   [90m 148 |[39m         where[33m:[39m { id[33m:[39m payload[33m.[39msub }[33m,[39m
+  [31m[1m>[22m[39m[90m 149 |[39m         include[33m:[39m { tenant[33m:[39m [36mtrue[39m }[33m,[39m
+   [90m     |[39m                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 150 |[39m       })[33m;[39m
+   [90m 151 |[39m
+   [90m 152 |[39m       [36mif[39m ([33m![39muser [33m||[39m user[33m.[39mstatus [33m!==[39m [32m'ACTIVE'[39m) {[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/application/auth.service.ts:159:24[39m[22m
+TS2339: Property 'tenantId' does not exist on type '{ id: string; email: string; firstName: string; lastName: string; avatarUrl: string; password: string; status: UserStatus; role: UserRole; lastLoginAt: Date; preferences: string; createdAt: Date; updatedAt: Date; }'.
+  [0m [90m 157 |[39m         sub[33m:[39m user[33m.[39mid[33m,[39m
+   [90m 158 |[39m         email[33m:[39m user[33m.[39memail[33m,[39m
+  [31m[1m>[22m[39m[90m 159 |[39m         tenantId[33m:[39m user[33m.[39mtenantId[33m,[39m
+   [90m     |[39m                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 160 |[39m         role[33m:[39m user[33m.[39mrole[33m,[39m
+   [90m 161 |[39m       }[33m;[39m
+   [90m 162 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/application/auth.service.ts:196:11[39m[22m
+TS2353: Object literal may only specify known properties, and 'tenantId' does not exist in type 'UserSelect<DefaultArgs>'.
+  [0m [90m 194 |[39m           role[33m:[39m [36mtrue[39m[33m,[39m
+   [90m 195 |[39m           status[33m:[39m [36mtrue[39m[33m,[39m
+  [31m[1m>[22m[39m[90m 196 |[39m           tenantId[33m:[39m [36mtrue[39m[33m,[39m
+   [90m     |[39m           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 197 |[39m           avatarUrl[33m:[39m [36mtrue[39m[33m,[39m
+   [90m 198 |[39m           preferences[33m:[39m [36mtrue[39m[33m,[39m
+   [90m 199 |[39m           createdAt[33m:[39m [36mtrue[39m[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/auth.module.ts:11:29[39m[22m
+TS2307: Cannot find module '../../common/guards/tenant.guard' or its corresponding type declarations.
+  [0m [90m  9 |[39m [36mimport[39m { [33mLocalStrategy[39m } [36mfrom[39m [32m'./infrastructure/local.strategy'[39m[33m;[39m
+   [90m 10 |[39m [36mimport[39m { [33mTokenBlacklistService[39m } [36mfrom[39m [32m'../../common/services/token-blacklist.service'[39m[33m;[39m
+  [31m[1m>[22m[39m[90m 11 |[39m [36mimport[39m { [33mTenantGuard[39m } [36mfrom[39m [32m'../../common/guards/tenant.guard'[39m[33m;[39m
+   [90m    |[39m                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 12 |[39m [36mimport[39m { [33mRateLimitGuard[39m } [36mfrom[39m [32m'../../common/guards/rate-limit.guard'[39m[33m;[39m
+   [90m 13 |[39m [36mimport[39m { [33mUsersModule[39m } [36mfrom[39m [32m'../users/users.module'[39m[33m;[39m
+   [90m 14 |[39m [36mimport[39m { [33mRedisModule[39m } [36mfrom[39m [32m'../../adapters/redis/redis.module'[39m[33m;[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/infrastructure/jwt.strategy.ts:35:20[39m[22m
+TS2353: Object literal may only specify known properties, and 'tenant' does not exist in type 'UserInclude<DefaultArgs>'.
+  [0m [90m 33 |[39m       [36mconst[39m user [33m=[39m [36mawait[39m [36mthis[39m[33m.[39mprisma[33m.[39muser[33m.[39mfindUnique({
+   [90m 34 |[39m         where[33m:[39m { id[33m:[39m payload[33m.[39msub }[33m,[39m
+  [31m[1m>[22m[39m[90m 35 |[39m         include[33m:[39m { tenant[33m:[39m [36mtrue[39m }[33m,[39m
+   [90m    |[39m                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 36 |[39m       })[33m;[39m
+   [90m 37 |[39m
+   [90m 38 |[39m       [36mif[39m ([33m![39muser [33m||[39m user[33m.[39mstatus [33m!==[39m [32m'ACTIVE'[39m) {[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/infrastructure/jwt.strategy.ts:45:24[39m[22m
+TS2339: Property 'tenantId' does not exist on type '{ id: string; email: string; firstName: string; lastName: string; avatarUrl: string; password: string; status: UserStatus; role: UserRole; lastLoginAt: Date; preferences: string; createdAt: Date; updatedAt: Date; }'.
+  [0m [90m 43 |[39m         id[33m:[39m user[33m.[39mid[33m,[39m
+   [90m 44 |[39m         email[33m:[39m user[33m.[39memail[33m,[39m
+  [31m[1m>[22m[39m[90m 45 |[39m         tenantId[33m:[39m user[33m.[39mtenantId[33m,[39m
+   [90m    |[39m                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 46 |[39m         role[33m:[39m user[33m.[39mrole[33m,[39m
+   [90m 47 |[39m         tenant[33m:[39m user[33m.[39mtenant[33m,[39m
+   [90m 48 |[39m       }[33m;[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/infrastructure/jwt.strategy.ts:47:22[39m[22m
+TS2339: Property 'tenant' does not exist on type '{ id: string; email: string; firstName: string; lastName: string; avatarUrl: string; password: string; status: UserStatus; role: UserRole; lastLoginAt: Date; preferences: string; createdAt: Date; updatedAt: Date; }'.
+  [0m [90m 45 |[39m         tenantId[33m:[39m user[33m.[39mtenantId[33m,[39m
+   [90m 46 |[39m         role[33m:[39m user[33m.[39mrole[33m,[39m
+  [31m[1m>[22m[39m[90m 47 |[39m         tenant[33m:[39m user[33m.[39mtenant[33m,[39m
+   [90m    |[39m                      [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 48 |[39m       }[33m;[39m
+   [90m 49 |[39m     } [36mcatch[39m (error) {
+   [90m 50 |[39m       [36mthrow[39m [36mnew[39m [33mUnauthorizedException[39m([32m'Invalid token'[39m)[33m;[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/auth/infrastructure/local.strategy.ts:22:71[39m[22m
+TS2554: Expected 2 arguments, but got 3.
+  [0m [90m 20 |[39m     [36mconst[39m tenantId [33m=[39m req[[32m'tenantId'[39m] [33m||[39m [32m'default-tenant'[39m[33m;[39m
+   [90m 21 |[39m     
+  [31m[1m>[22m[39m[90m 22 |[39m     [36mconst[39m user [33m=[39m [36mawait[39m [36mthis[39m[33m.[39mauthService[33m.[39mvalidateUser(email[33m,[39m password[33m,[39m tenantId)[33m;[39m
+   [90m    |[39m                                                                       [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 23 |[39m     [36mif[39m ([33m![39muser) {
+   [90m 24 |[39m       [36mthrow[39m [36mnew[39m [33mUnauthorizedException[39m([32m'Invalid credentials'[39m)[33m;[39m
+   [90m 25 |[39m     }[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/badges/application/badges.service.ts:139:9[39m[22m
+TS2322: Type '{ category?: ProjectCategory; name?: string; description?: string; icon?: string; difficulty?: ProjectDifficulty; criteria?: { value: number; type: "submission_count" | "score_threshold" | "project_completion" | "streak" | "category_mastery"; projectId?: string; category?: ProjectCategory; timeRange?: "week" | ... 1...' is not assignable to type '(Without<BadgeUpdateInput, BadgeUncheckedUpdateInput> & BadgeUncheckedUpdateInput) | (Without<...> & BadgeUpdateInput)'.
+  Type '{ category?: ProjectCategory; name?: string; description?: string; icon?: string; difficulty?: ProjectDifficulty; criteria?: { value: number; type: "submission_count" | "score_threshold" | "project_completion" | "streak" | "category_mastery"; projectId?: string; category?: ProjectCategory; timeRange?: "week" | ... 1...' is not assignable to type 'Without<BadgeUncheckedUpdateInput, BadgeUpdateInput> & BadgeUpdateInput'.
+    Types of property 'criteria' are incompatible.
+      Type '{ value: number; type: "submission_count" | "score_threshold" | "project_completion" | "streak" | "category_mastery"; projectId?: string; category?: ProjectCategory; timeRange?: "week" | ... 1 more ... | "all"; }' is not assignable to type 'string | NullableStringFieldUpdateOperationsInput'.
+  [0m [90m 137 |[39m       [36mreturn[39m [36mawait[39m [36mthis[39m[33m.[39mbadgesRepository[33m.[39mupdate({
+   [90m 138 |[39m         where[33m:[39m { id }[33m,[39m
+  [31m[1m>[22m[39m[90m 139 |[39m         data[33m:[39m updateBadgeDto[33m,[39m
+   [90m     |[39m         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 140 |[39m       })[33m;[39m
+   [90m 141 |[39m     } [36mcatch[39m (error) {
+   [90m 142 |[39m       [36mthis[39m[33m.[39mlogger[33m.[39merror([32m`Failed to update badge ${id}:`[39m[33m,[39m error)[33m;[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/badges/infrastructure/badges.controller.ts:32:54[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m 30 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 31 |[39m   create([33m@[39m[33mBody[39m() createBadgeDto[33m:[39m [33mCreateBadgeDto[39m[33m,[39m [33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 32 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mbadgesService[33m.[39mcreate(createBadgeDto[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m    |[39m                                                      [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 33 |[39m   }
+   [90m 34 |[39m
+   [90m 35 |[39m   [33m@[39m[33mGet[39m()[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/badges/infrastructure/badges.controller.ts:50:81[39m[22m
+TS2554: Expected 0-4 arguments, but got 5.
+  [0m [90m 48 |[39m     [33m@[39m[33mQuery[39m([32m'difficulty'[39m) difficulty[33m?[39m[33m:[39m string[33m,[39m
+   [90m 49 |[39m   ) {
+  [31m[1m>[22m[39m[90m 50 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mbadgesService[33m.[39mfindAll(req[33m.[39muser[33m.[39mtenantId[33m,[39m page[33m,[39m limit[33m,[39m category[33m,[39m difficulty)[33m;[39m
+   [90m    |[39m                                                                                 [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 51 |[39m   }
+   [90m 52 |[39m
+   [90m 53 |[39m   [33m@[39m[33mGet[39m([32m'my-badges'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/badges/infrastructure/badges.controller.ts:58:58[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m 56 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 57 |[39m   getMyBadges([33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 58 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mbadgesService[33m.[39mgetUserBadges(req[33m.[39muser[33m.[39mid[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m    |[39m                                                          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 59 |[39m   }
+   [90m 60 |[39m
+   [90m 61 |[39m   [33m@[39m[33mGet[39m([32m'my-progress'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/badges/infrastructure/badges.controller.ts:66:65[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m 64 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 65 |[39m   getMyProgress([33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 66 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mbadgesService[33m.[39mgetUserBadgeProgress(req[33m.[39muser[33m.[39mid[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m    |[39m                                                                 [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 67 |[39m   }
+   [90m 68 |[39m
+   [90m 69 |[39m   [33m@[39m[33mGet[39m([32m'stats'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/badges/infrastructure/badges.controller.ts:74:45[39m[22m
+TS2554: Expected 0 arguments, but got 1.
+  [0m [90m 72 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 73 |[39m   getStats([33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 74 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mbadgesService[33m.[39mgetBadgeStats(req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 75 |[39m   }
+   [90m 76 |[39m
+   [90m 77 |[39m   [33m@[39m[33mGet[39m([32m'most-earned'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/badges/infrastructure/badges.controller.ts:86:70[39m[22m
+TS2554: Expected 0-1 arguments, but got 2.
+  [0m [90m 84 |[39m     [33m@[39m[33mQuery[39m([32m'limit'[39m[33m,[39m [36mnew[39m [33mParseIntPipe[39m({ optional[33m:[39m [36mtrue[39m })) limit[33m:[39m number [33m=[39m [35m10[39m[33m,[39m
+   [90m 85 |[39m   ) {
+  [31m[1m>[22m[39m[90m 86 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mbadgesService[33m.[39mgetMostEarnedBadges(req[33m.[39muser[33m.[39mtenantId[33m,[39m limit)[33m;[39m
+   [90m    |[39m                                                                      [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 87 |[39m   }
+   [90m 88 |[39m
+   [90m 89 |[39m   [33m@[39m[33mGet[39m([32m'recent-awards'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/badges/infrastructure/badges.controller.ts:98:71[39m[22m
+TS2554: Expected 0-1 arguments, but got 2.
+  [0m [90m  96 |[39m     [33m@[39m[33mQuery[39m([32m'limit'[39m[33m,[39m [36mnew[39m [33mParseIntPipe[39m({ optional[33m:[39m [36mtrue[39m })) limit[33m:[39m number [33m=[39m [35m20[39m[33m,[39m
+   [90m  97 |[39m   ) {
+  [31m[1m>[22m[39m[90m  98 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mbadgesService[33m.[39mgetRecentBadgeAwards(req[33m.[39muser[33m.[39mtenantId[33m,[39m limit)[33m;[39m
+   [90m     |[39m                                                                       [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m  99 |[39m   }
+   [90m 100 |[39m
+   [90m 101 |[39m   [33m@[39m[33mGet[39m([32m':id'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/badges/infrastructure/badges.controller.ts:107:43[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m 105 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 106 |[39m   findOne([33m@[39m[33mParam[39m([32m'id'[39m) id[33m:[39m string[33m,[39m [33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 107 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mbadgesService[33m.[39mfindOne(id[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m     |[39m                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 108 |[39m   }
+   [90m 109 |[39m
+   [90m 110 |[39m   [33m@[39m[33mPatch[39m([32m':id'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/badges/infrastructure/badges.controller.ts:116:58[39m[22m
+TS2554: Expected 2 arguments, but got 3.
+  [0m [90m 114 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 115 |[39m   update([33m@[39m[33mParam[39m([32m'id'[39m) id[33m:[39m string[33m,[39m [33m@[39m[33mBody[39m() updateBadgeDto[33m:[39m [33mUpdateBadgeDto[39m[33m,[39m [33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 116 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mbadgesService[33m.[39mupdate(id[33m,[39m updateBadgeDto[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m     |[39m                                                          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 117 |[39m   }
+   [90m 118 |[39m
+   [90m 119 |[39m   [33m@[39m[33mPost[39m([32m'assign'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/badges/infrastructure/badges.controller.ts:125:59[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m 123 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 124 |[39m   assignBadge([33m@[39m[33mBody[39m() assignBadgeDto[33m:[39m [33mAssignBadgeDto[39m[33m,[39m [33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 125 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mbadgesService[33m.[39massignBadge(assignBadgeDto[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m     |[39m                                                           [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 126 |[39m   }
+   [90m 127 |[39m
+   [90m 128 |[39m   [33m@[39m[33mPost[39m([32m'check-badges'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/badges/infrastructure/badges.controller.ts:133:64[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m 131 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 132 |[39m   checkBadges([33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 133 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mbadgesService[33m.[39mcheckAndAwardBadges(req[33m.[39muser[33m.[39mid[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m     |[39m                                                                [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 134 |[39m   }
+   [90m 135 |[39m
+   [90m 136 |[39m   [33m@[39m[33mDelete[39m([32m':id'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/badges/infrastructure/badges.controller.ts:142:42[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m 140 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 141 |[39m   remove([33m@[39m[33mParam[39m([32m'id'[39m) id[33m:[39m string[33m,[39m [33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 142 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mbadgesService[33m.[39mremove(id[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m     |[39m                                          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 143 |[39m   }
+   [90m 144 |[39m }
+   [90m 145 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/projects/infrastructure/projects.controller.ts:32:58[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m 30 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 31 |[39m   create([33m@[39m[33mBody[39m() createProjectDto[33m:[39m [33mCreateProjectDto[39m[33m,[39m [33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 32 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mprojectsService[33m.[39mcreate(createProjectDto[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m    |[39m                                                          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 33 |[39m   }
+   [90m 34 |[39m
+   [90m 35 |[39m   [33m@[39m[33mGet[39m()[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/projects/infrastructure/projects.controller.ts:63:77[39m[22m
+TS2554: Expected 1-3 arguments, but got 4.
+  [0m [90m 61 |[39m       isPublic[33m,[39m
+   [90m 62 |[39m     }[33m;[39m
+  [31m[1m>[22m[39m[90m 63 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mprojectsService[33m.[39mfindAll(req[33m.[39muser[33m.[39mtenantId[33m,[39m searchDto[33m,[39m page[33m,[39m limit)[33m;[39m
+   [90m    |[39m                                                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 64 |[39m   }
+   [90m 65 |[39m
+   [90m 66 |[39m   [33m@[39m[33mGet[39m([32m'category/:category'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/projects/infrastructure/projects.controller.ts:71:58[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m 69 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 70 |[39m   findByCategory([33m@[39m[33mParam[39m([32m'category'[39m) category[33m:[39m string[33m,[39m [33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 71 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mprojectsService[33m.[39mfindByCategory(category[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m    |[39m                                                          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 72 |[39m   }
+   [90m 73 |[39m
+   [90m 74 |[39m   [33m@[39m[33mGet[39m([32m'difficulty/:difficulty'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/projects/infrastructure/projects.controller.ts:79:62[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m 77 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 78 |[39m   findByDifficulty([33m@[39m[33mParam[39m([32m'difficulty'[39m) difficulty[33m:[39m string[33m,[39m [33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 79 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mprojectsService[33m.[39mfindByDifficulty(difficulty[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m    |[39m                                                              [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 80 |[39m   }
+   [90m 81 |[39m
+   [90m 82 |[39m   [33m@[39m[33mGet[39m([32m':id'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/projects/infrastructure/projects.controller.ts:88:45[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m 86 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 87 |[39m   findOne([33m@[39m[33mParam[39m([32m'id'[39m) id[33m:[39m string[33m,[39m [33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 88 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mprojectsService[33m.[39mfindOne(id[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m    |[39m                                             [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 89 |[39m   }
+   [90m 90 |[39m
+   [90m 91 |[39m   [33m@[39m[33mGet[39m([32m':id/stats'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/projects/infrastructure/projects.controller.ts:97:46[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m  95 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m  96 |[39m   getStats([33m@[39m[33mParam[39m([32m'id'[39m) id[33m:[39m string[33m,[39m [33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m  97 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mprojectsService[33m.[39mgetStats(id[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m     |[39m                                              [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m  98 |[39m   }
+   [90m  99 |[39m
+   [90m 100 |[39m   [33m@[39m[33mPatch[39m([32m':id'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/projects/infrastructure/projects.controller.ts:106:62[39m[22m
+TS2554: Expected 2 arguments, but got 3.
+  [0m [90m 104 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 105 |[39m   update([33m@[39m[33mParam[39m([32m'id'[39m) id[33m:[39m string[33m,[39m [33m@[39m[33mBody[39m() updateProjectDto[33m:[39m [33mUpdateProjectDto[39m[33m,[39m [33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 106 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mprojectsService[33m.[39mupdate(id[33m,[39m updateProjectDto[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m     |[39m                                                              [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 107 |[39m   }
+   [90m 108 |[39m
+   [90m 109 |[39m   [33m@[39m[33mPatch[39m([32m':id/toggle-active'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/projects/infrastructure/projects.controller.ts:115:50[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m 113 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 114 |[39m   toggleActive([33m@[39m[33mParam[39m([32m'id'[39m) id[33m:[39m string[33m,[39m [33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 115 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mprojectsService[33m.[39mtoggleActive(id[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m     |[39m                                                  [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 116 |[39m   }
+   [90m 117 |[39m
+   [90m 118 |[39m   [33m@[39m[33mDelete[39m([32m':id'[39m)[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/projects/infrastructure/projects.controller.ts:124:44[39m[22m
+TS2554: Expected 1 arguments, but got 2.
+  [0m [90m 122 |[39m   [33m@[39m[33mApiResponse[39m({ status[33m:[39m [35m401[39m[33m,[39m description[33m:[39m [32m'Unauthorized'[39m })
+   [90m 123 |[39m   remove([33m@[39m[33mParam[39m([32m'id'[39m) id[33m:[39m string[33m,[39m [33m@[39m[33mRequest[39m() req) {
+  [31m[1m>[22m[39m[90m 124 |[39m     [36mreturn[39m [36mthis[39m[33m.[39mprojectsService[33m.[39mremove(id[33m,[39m req[33m.[39muser[33m.[39mtenantId)[33m;[39m
+   [90m     |[39m                                            [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 125 |[39m   }
+   [90m 126 |[39m }
+   [90m 127 |[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/submissions/application/submissions.service.ts:3:32[39m[22m
+TS2307: Cannot find module '../../../adapters/storage/storage.service' or its corresponding type declarations.
+  [0m [90m 1 |[39m [36mimport[39m { [33mInjectable[39m[33m,[39m [33mNotFoundException[39m[33m,[39m [33mBadRequestException[39m } [36mfrom[39m [32m'@nestjs/common'[39m[33m;[39m
+   [90m 2 |[39m [36mimport[39m { [33mSubmissionsRepository[39m } [36mfrom[39m [32m'../infrastructure/submissions.repository'[39m[33m;[39m
+  [31m[1m>[22m[39m[90m 3 |[39m [36mimport[39m { [33mStorageService[39m } [36mfrom[39m [32m'../../../adapters/storage/storage.service'[39m[33m;[39m
+   [90m   |[39m                                [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 4 |[39m [36mimport[39m { [33mEmailService[39m } [36mfrom[39m [32m'../../../adapters/email/email.service'[39m[33m;[39m
+   [90m 5 |[39m [36mimport[39m { [33mCreateSubmissionDto[39m[33m,[39m [33mUpdateSubmissionDto[39m[33m,[39m [33mSubmissionReviewDto[39m } [36mfrom[39m [32m'@vulhub/schema'[39m[33m;[39m
+   [90m 6 |[39m [36mimport[39m { [33mBaseService[39m } [36mfrom[39m [32m'../../../common/services/base.service'[39m[33m;[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/users/application/users.service.ts:44:16[39m[22m
+TS2741: Property 'tenantId' is missing in type '{ id: string; email: string; firstName: string; lastName: string; avatarUrl: string; status: any; role: any; preferences: Record<string, any>; lastLoginAt: string; createdAt: string; updatedAt: string; }' but required in type '{ email: string; status: UserStatus; firstName: string; lastName: string; tenantId: string; id: string; avatarUrl: string; role: UserRole; createdAt: string; updatedAt: string; preferences: Record<...>; lastLoginAt: string; }'.
+  [0m [90m 42 |[39m          
+   [90m 43 |[39m          [90m// Map Prisma user to UserProfile[39m
+  [31m[1m>[22m[39m[90m 44 |[39m          [36mconst[39m userProfile[33m:[39m [33mUserProfile[39m [33m=[39m {
+   [90m    |[39m                [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 45 |[39m            id[33m:[39m user[33m.[39mid[33m,[39m
+   [90m 46 |[39m            email[33m:[39m user[33m.[39memail[33m,[39m
+   [90m 47 |[39m            firstName[33m:[39m user[33m.[39mfirstName[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/users/application/users.service.ts:52:25[39m[22m
+TS2352: Conversion of type 'string' to type 'Record<string, any>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  [0m [90m 50 |[39m            status[33m:[39m user[33m.[39mstatus [36mas[39m any[33m,[39m
+   [90m 51 |[39m            role[33m:[39m user[33m.[39mrole [36mas[39m any[33m,[39m
+  [31m[1m>[22m[39m[90m 52 |[39m            preferences[33m:[39m user[33m.[39mpreferences [36mas[39m [33mRecord[39m[33m<[39m[33mstring[39m[33m,[39m any[33m>[39m [33m||[39m {}[33m,[39m
+   [90m    |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 53 |[39m            lastLoginAt[33m:[39m user[33m.[39mlastLoginAt[33m?[39m[33m.[39mtoISOString() [33m||[39m [32m''[39m[33m,[39m
+   [90m 54 |[39m            createdAt[33m:[39m user[33m.[39mcreatedAt[33m.[39mtoISOString()[33m,[39m
+   [90m 55 |[39m            updatedAt[33m:[39m user[33m.[39mupdatedAt[33m.[39mtoISOString()[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/users/application/users.service.ts:105:16[39m[22m
+TS2322: Type '{ id: string; email: string; firstName: string; lastName: string; avatarUrl: string; status: any; role: any; preferences: Record<string, any>; lastLoginAt: string; createdAt: string; updatedAt: string; }[]' is not assignable to type '{ email: string; status: UserStatus; firstName: string; lastName: string; tenantId: string; id: string; avatarUrl: string; role: UserRole; createdAt: string; updatedAt: string; preferences: Record<...>; lastLoginAt: string; }[]'.
+  Property 'tenantId' is missing in type '{ id: string; email: string; firstName: string; lastName: string; avatarUrl: string; status: any; role: any; preferences: Record<string, any>; lastLoginAt: string; createdAt: string; updatedAt: string; }' but required in type '{ email: string; status: UserStatus; firstName: string; lastName: string; tenantId: string; id: string; avatarUrl: string; role: UserRole; createdAt: string; updatedAt: string; preferences: Record<...>; lastLoginAt: string; }'.
+  [0m [90m 103 |[39m
+   [90m 104 |[39m          [90m// Map Prisma users to UserProfile[39m
+  [31m[1m>[22m[39m[90m 105 |[39m          [36mconst[39m userProfiles[33m:[39m [33mUserProfile[39m[] [33m=[39m users[33m.[39mmap(user [33m=>[39m ({
+   [90m     |[39m                [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 106 |[39m            id[33m:[39m user[33m.[39mid[33m,[39m
+   [90m 107 |[39m            email[33m:[39m user[33m.[39memail[33m,[39m
+   [90m 108 |[39m            firstName[33m:[39m user[33m.[39mfirstName[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/users/application/users.service.ts:113:25[39m[22m
+TS2352: Conversion of type 'string' to type 'Record<string, any>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  [0m [90m 111 |[39m            status[33m:[39m user[33m.[39mstatus [36mas[39m any[33m,[39m
+   [90m 112 |[39m            role[33m:[39m user[33m.[39mrole [36mas[39m any[33m,[39m
+  [31m[1m>[22m[39m[90m 113 |[39m            preferences[33m:[39m user[33m.[39mpreferences [36mas[39m [33mRecord[39m[33m<[39m[33mstring[39m[33m,[39m any[33m>[39m [33m||[39m {}[33m,[39m
+   [90m     |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 114 |[39m            lastLoginAt[33m:[39m user[33m.[39mlastLoginAt[33m?[39m[33m.[39mtoISOString() [33m||[39m [32m''[39m[33m,[39m
+   [90m 115 |[39m            createdAt[33m:[39m user[33m.[39mcreatedAt[33m.[39mtoISOString()[33m,[39m
+   [90m 116 |[39m            updatedAt[33m:[39m user[33m.[39mupdatedAt[33m.[39mtoISOString()[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/users/application/users.service.ts:163:16[39m[22m
+TS2741: Property 'tenantId' is missing in type '{ id: string; email: string; firstName: string; lastName: string; avatarUrl: string; status: any; role: any; preferences: Record<string, any>; lastLoginAt: string; createdAt: string; updatedAt: string; }' but required in type '{ email: string; status: UserStatus; firstName: string; lastName: string; tenantId: string; id: string; avatarUrl: string; role: UserRole; createdAt: string; updatedAt: string; preferences: Record<...>; lastLoginAt: string; }'.
+  [0m [90m 161 |[39m
+   [90m 162 |[39m          [90m// Map Prisma user to UserProfile[39m
+  [31m[1m>[22m[39m[90m 163 |[39m          [36mconst[39m userProfile[33m:[39m [33mUserProfile[39m [33m=[39m {
+   [90m     |[39m                [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 164 |[39m            id[33m:[39m user[33m.[39mid[33m,[39m
+   [90m 165 |[39m            email[33m:[39m user[33m.[39memail[33m,[39m
+   [90m 166 |[39m            firstName[33m:[39m user[33m.[39mfirstName[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/users/application/users.service.ts:171:25[39m[22m
+TS2352: Conversion of type 'string' to type 'Record<string, any>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  [0m [90m 169 |[39m            status[33m:[39m user[33m.[39mstatus [36mas[39m any[33m,[39m
+   [90m 170 |[39m            role[33m:[39m user[33m.[39mrole [36mas[39m any[33m,[39m
+  [31m[1m>[22m[39m[90m 171 |[39m            preferences[33m:[39m user[33m.[39mpreferences [36mas[39m [33mRecord[39m[33m<[39m[33mstring[39m[33m,[39m any[33m>[39m [33m||[39m {}[33m,[39m
+   [90m     |[39m                         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 172 |[39m            lastLoginAt[33m:[39m user[33m.[39mlastLoginAt[33m?[39m[33m.[39mtoISOString() [33m||[39m [32m''[39m[33m,[39m
+   [90m 173 |[39m            createdAt[33m:[39m user[33m.[39mcreatedAt[33m.[39mtoISOString()[33m,[39m
+   [90m 174 |[39m            updatedAt[33m:[39m user[33m.[39mupdatedAt[33m.[39mtoISOString()[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/users/application/users.service.ts:214:23[39m[22m
+TS2352: Conversion of type 'string' to type 'Record<string, any>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  [0m [90m 212 |[39m             preferences[33m:[39m updateUserDto[33m.[39mpreferences
+   [90m 213 |[39m               [33m?[39m {
+  [31m[1m>[22m[39m[90m 214 |[39m                   [33m...[39m(user[33m.[39mpreferences [36mas[39m [33mRecord[39m[33m<[39m[33mstring[39m[33m,[39m any[33m>[39m [33m||[39m {})[33m,[39m
+   [90m     |[39m                       [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 215 |[39m                   [33m...[39mupdateUserDto[33m.[39mpreferences[33m,[39m
+   [90m 216 |[39m                 }
+   [90m 217 |[39m               [33m:[39m user[33m.[39mpreferences[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/users/application/users.service.ts:222:15[39m[22m
+TS2741: Property 'tenantId' is missing in type '{ id: string; email: string; firstName: string; lastName: string; avatarUrl: string; status: any; role: any; preferences: Record<string, any>; lastLoginAt: string; createdAt: string; updatedAt: string; }' but required in type '{ email: string; status: UserStatus; firstName: string; lastName: string; tenantId: string; id: string; avatarUrl: string; role: UserRole; createdAt: string; updatedAt: string; preferences: Record<...>; lastLoginAt: string; }'.
+  [0m [90m 220 |[39m
+   [90m 221 |[39m         [90m// Map Prisma user to UserProfile[39m
+  [31m[1m>[22m[39m[90m 222 |[39m         [36mconst[39m userProfile[33m:[39m [33mUserProfile[39m [33m=[39m {
+   [90m     |[39m               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 223 |[39m           id[33m:[39m updatedUser[33m.[39mid[33m,[39m
+   [90m 224 |[39m           email[33m:[39m updatedUser[33m.[39memail[33m,[39m
+   [90m 225 |[39m           firstName[33m:[39m updatedUser[33m.[39mfirstName[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/users/application/users.service.ts:230:24[39m[22m
+TS2352: Conversion of type 'string' to type 'Record<string, any>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  [0m [90m 228 |[39m           status[33m:[39m updatedUser[33m.[39mstatus [36mas[39m any[33m,[39m
+   [90m 229 |[39m           role[33m:[39m updatedUser[33m.[39mrole [36mas[39m any[33m,[39m
+  [31m[1m>[22m[39m[90m 230 |[39m           preferences[33m:[39m updatedUser[33m.[39mpreferences [36mas[39m [33mRecord[39m[33m<[39m[33mstring[39m[33m,[39m any[33m>[39m [33m||[39m {}[33m,[39m
+   [90m     |[39m                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 231 |[39m           lastLoginAt[33m:[39m updatedUser[33m.[39mlastLoginAt[33m?[39m[33m.[39mtoISOString() [33m||[39m [32m''[39m[33m,[39m
+   [90m 232 |[39m           createdAt[33m:[39m updatedUser[33m.[39mcreatedAt[33m.[39mtoISOString()[33m,[39m
+   [90m 233 |[39m           updatedAt[33m:[39m updatedUser[33m.[39mupdatedAt[33m.[39mtoISOString()[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/users/application/users.service.ts:267:15[39m[22m
+TS2741: Property 'tenantId' is missing in type '{ id: string; email: string; firstName: string; lastName: string; avatarUrl: string; status: any; role: any; preferences: Record<string, any>; lastLoginAt: string; createdAt: string; updatedAt: string; }' but required in type '{ email: string; status: UserStatus; firstName: string; lastName: string; tenantId: string; id: string; avatarUrl: string; role: UserRole; createdAt: string; updatedAt: string; preferences: Record<...>; lastLoginAt: string; }'.
+  [0m [90m 265 |[39m
+   [90m 266 |[39m         [90m// Map Prisma user to UserProfile[39m
+  [31m[1m>[22m[39m[90m 267 |[39m         [36mconst[39m userProfile[33m:[39m [33mUserProfile[39m [33m=[39m {
+   [90m     |[39m               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 268 |[39m           id[33m:[39m deletedUser[33m.[39mid[33m,[39m
+   [90m 269 |[39m           email[33m:[39m deletedUser[33m.[39memail[33m,[39m
+   [90m 270 |[39m           firstName[33m:[39m deletedUser[33m.[39mfirstName[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/users/application/users.service.ts:275:24[39m[22m
+TS2352: Conversion of type 'string' to type 'Record<string, any>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  [0m [90m 273 |[39m           status[33m:[39m deletedUser[33m.[39mstatus [36mas[39m any[33m,[39m
+   [90m 274 |[39m           role[33m:[39m deletedUser[33m.[39mrole [36mas[39m any[33m,[39m
+  [31m[1m>[22m[39m[90m 275 |[39m           preferences[33m:[39m deletedUser[33m.[39mpreferences [36mas[39m [33mRecord[39m[33m<[39m[33mstring[39m[33m,[39m any[33m>[39m [33m||[39m {}[33m,[39m
+   [90m     |[39m                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 276 |[39m           lastLoginAt[33m:[39m deletedUser[33m.[39mlastLoginAt[33m?[39m[33m.[39mtoISOString() [33m||[39m [32m''[39m[33m,[39m
+   [90m 277 |[39m           createdAt[33m:[39m deletedUser[33m.[39mcreatedAt[33m.[39mtoISOString()[33m,[39m
+   [90m 278 |[39m           updatedAt[33m:[39m deletedUser[33m.[39mupdatedAt[33m.[39mtoISOString()[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/users/application/users.service.ts:310:15[39m[22m
+TS2741: Property 'tenantId' is missing in type '{ id: string; email: string; firstName: string; lastName: string; avatarUrl: string; status: any; role: any; preferences: Record<string, any>; lastLoginAt: string; createdAt: string; updatedAt: string; }' but required in type '{ email: string; status: UserStatus; firstName: string; lastName: string; tenantId: string; id: string; avatarUrl: string; role: UserRole; createdAt: string; updatedAt: string; preferences: Record<...>; lastLoginAt: string; }'.
+  [0m [90m 308 |[39m
+   [90m 309 |[39m         [90m// Map Prisma user to UserProfile[39m
+  [31m[1m>[22m[39m[90m 310 |[39m         [36mconst[39m userProfile[33m:[39m [33mUserProfile[39m [33m=[39m {
+   [90m     |[39m               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 311 |[39m           id[33m:[39m user[33m.[39mid[33m,[39m
+   [90m 312 |[39m           email[33m:[39m user[33m.[39memail[33m,[39m
+   [90m 313 |[39m           firstName[33m:[39m user[33m.[39mfirstName[33m,[39m[0m
+
+[1m[31mERROR[39m[22m in [1m./src/modules/users/application/users.service.ts:318:24[39m[22m
+TS2352: Conversion of type 'string' to type 'Record<string, any>' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  [0m [90m 316 |[39m           status[33m:[39m user[33m.[39mstatus [36mas[39m any[33m,[39m
+   [90m 317 |[39m           role[33m:[39m user[33m.[39mrole [36mas[39m any[33m,[39m
+  [31m[1m>[22m[39m[90m 318 |[39m           preferences[33m:[39m user[33m.[39mpreferences [36mas[39m [33mRecord[39m[33m<[39m[33mstring[39m[33m,[39m any[33m>[39m [33m||[39m {}[33m,[39m
+   [90m     |[39m                        [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 319 |[39m           lastLoginAt[33m:[39m user[33m.[39mlastLoginAt[33m?[39m[33m.[39mtoISOString() [33m||[39m [32m''[39m[33m,[39m
+   [90m 320 |[39m           createdAt[33m:[39m user[33m.[39mcreatedAt[33m.[39mtoISOString()[33m,[39m
+   [90m 321 |[39m           updatedAt[33m:[39m user[33m.[39mupdatedAt[33m.[39mtoISOString()[33m,[39m[0m
+
+[1m[33m4 errors have detailed information that is not shown.
+Use 'stats.errorDetails: true' resp. '--stats-error-details' to show it.[39m[22m
+
+webpack 5.97.1 compiled with [1m[31m56 errors[39m[22m in 30426 ms
+ ELIFECYCLE  Command failed with exit code 1.

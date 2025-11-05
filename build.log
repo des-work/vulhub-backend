@@ -1,0 +1,16 @@
+
+> @vulhub/api@1.0.0 build C:\Users\desmo\GA Projects\VulHub-LeaderBoard-Web\apps\api
+> nest build
+
+[1m[31mERROR[39m[22m in [1m./src/modules/submissions/application/submissions.service.ts:55:9[39m[22m
+TS2322: Type 'string[]' is not assignable to type 'string'.
+  [0m [90m 53 |[39m         user[33m:[39m { connect[33m:[39m { id[33m:[39m userId } }[33m,[39m
+   [90m 54 |[39m         project[33m:[39m { connect[33m:[39m { id[33m:[39m createSubmissionDto[33m.[39mprojectId } }[33m,[39m
+  [31m[1m>[22m[39m[90m 55 |[39m         evidenceUrls[33m,[39m
+   [90m    |[39m         [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+   [90m 56 |[39m         status[33m:[39m [32m'PENDING'[39m[33m,[39m
+   [90m 57 |[39m       })[33m;[39m
+   [90m 58 |[39m     } [36mcatch[39m (error) {[0m
+
+webpack 5.97.1 compiled with [1m[31m1 error[39m[22m in 18873 ms
+ ELIFECYCLE  Command failed with exit code 1.
