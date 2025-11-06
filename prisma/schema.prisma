@@ -152,12 +152,14 @@ model UserBadge {
   id        String   @id @default(uuid())
   userId    String
   badgeId   String
+  tenantId  String
   earnedAt  DateTime @default(now())
   metadata  Json?
 
   // Relations
-  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
-  badge Badge @relation(fields: [badgeId], references: [id], onDelete: Cascade)
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  badge  Badge  @relation(fields: [badgeId], references: [id], onDelete: Cascade)
+  tenant Tenant @relation(fields: [tenantId], references: [id], onDelete: Cascade)
 
   @@unique([userId, badgeId])
   @@map("user_badges")
