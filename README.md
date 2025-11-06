@@ -1,6 +1,9 @@
-# apps/api
+# VulHub Backend (NestJS API)
 
-This directory contains the NestJS backend API for the VulHub Leaderboard.
+Standalone NestJS backend API for the VulHub Leaderboard platform.
+
+**Deployed to**: Railway  
+**Frontend**: https://github.com/des-work/VulHub-LeaderBoard-Web (Vercel)
 
 ## 🧠 Architecture Principles
 
